@@ -8,13 +8,13 @@ Tipe data adalah sebuah cara untuk membedakan data berdasarkan dari jenis datany
 
 #### 1. TIPE DATA PRMITIF
 Tipe data primitive adalah tipe data yang ditentukan melalui sistemnya. Perbedaan dari setiap bahasa pemrograman yang digunakan adalah dari jumlah bitnya. Contoh dari tipe data primitive adalah :
-- Int : Tipe data yang digunakan untuk bilangan bulat
-- Float : Tipe data yang digunakan untuk bilangan desimal
-- Char : Tipe data yang digunakan untuk huruf
-- Boolean : Tipe data yang digunakan untuk nilai yang memiliki arti antara true dan false
+- Int : Tipe data yang digunakan untuk bilangan bulat.
+- Float : Tipe data yang digunakan untuk bilangan desimal.
+- Char : Tipe data yang digunakan untuk huruf.
+- Boolean : Tipe data yang digunakan untuk nilai yang memiliki arti antara true dan false.
 
 #### 2. TIPE DATA ABSTRAK
-Tipe data abstrak adalah tipe data yang dibuat oleh programmernya sendiri. Tipe data abstrak ini berisi dari berbagai banyak tipe data. Nilai nya juga bisa lebih dari satu dan berbagai tipe data
+Tipe data abstrak adalah tipe data yang dibuat oleh programmernya sendiri. Tipe data abstrak ini berisi dari berbagai banyak tipe data. Nilai nya juga bisa lebih dari satu dan berbagai tipe data.
 
 #### 3. TIPE DATA KOLEKSI
 Tipe data koleksi adalah tipe data untuk menyimpan beberapa nilai secara bersamaan. Tipe data koleksi juga bisa mengelola banyak data dengan terstruktur. Contoh dari tipe data koleksi yaitu :
