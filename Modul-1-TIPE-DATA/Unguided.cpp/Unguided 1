@@ -1,0 +1,23 @@
+#include <iostream>
+
+using namespace std;
+
+// Fungsi untuk memfaktorialkan suatu bilangan
+int factorial(int Bilangan) {
+    if (Bilangan == 0 || Bilangan == 1)
+        return 1;
+    else
+        return Bilangan * factorial(Bilangan - 1);
+}
+
+int main() {
+    int Bilangan;
+
+    cout << "Masukkan suatu bilangan: ";
+    cin >> Bilangan;
+
+    // Untuk menghitung faktorial dari sebuah bilangan
+    cout << "Bilangan Faktorial dari " << Bilangan << " adalah: " << factorial(Bilangan) << endl;
+
+    return 0;
+}
