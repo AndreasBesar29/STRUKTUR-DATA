@@ -69,6 +69,8 @@ int main()
 }
 ```
 #### Output:
+![Guided 1 Output](https://github.com/AndreasBesar29/STRUKTUR-DATA-ASSIGNMENT/assets/161665251/7183a723-26ba-45aa-a1cb-a16600595cd8)
+![Guided 1 Full](https://github.com/AndreasBesar29/STRUKTUR-DATA-ASSIGNMENT/assets/161665251/fd44cdfa-7915-4231-a805-9542f8224c47)
 
 Kode di atas digunakan untuk mencetak hasil dari penjumlahan, pengurangan, perkalian, dan pembagian atau bisa disebut juga kalkulator sederhana ke layar output dengan menggunakan function cout dan switch untuk menjalani atau mengeksekusi program tersebut.
 
@@ -106,6 +108,8 @@ int main()
 }
 ```
 #### Output:
+![Guided 2 Output](https://github.com/AndreasBesar29/STRUKTUR-DATA-ASSIGNMENT/assets/161665251/b7c61244-2674-4c96-b2a7-6266db2c4a21)
+![Guided 2 Full](https://github.com/AndreasBesar29/STRUKTUR-DATA-ASSIGNMENT/assets/161665251/9738c926-54a2-4122-9808-7f05e78a04df)
 
 Kode diatas digunakan untuk menyimpan data mahasiswa yang terdiri dari nama, alamat, dan umur ke layar output dengan menggunakan function printf agar bisa mengeksekusi program tersebut.
 
@@ -133,6 +137,8 @@ int main()
 
 ```
 #### Output:
+![Guided 3 Output](https://github.com/AndreasBesar29/STRUKTUR-DATA-ASSIGNMENT/assets/161665251/a657ab7c-25b2-4578-b6a4-d4baeec24213)
+![Guided 3 Full](https://github.com/AndreasBesar29/STRUKTUR-DATA-ASSIGNMENT/assets/161665251/e26617c5-adff-4437-b1ec-0136fe1e3700)
 
 Kode diatas digunakan untuk medeklarasi array nilai dengan nilai elemen bertipe integer dan mencetak masing masing dari integer tersebut ke layar output dan menggunakan function cout untuk mengeksekusinya.
 
@@ -167,8 +173,10 @@ int main() {
 
 ```
 #### Output:
+![Unguided 1 Output](https://github.com/AndreasBesar29/STRUKTUR-DATA-ASSIGNMENT/assets/161665251/7f4fb009-fc8d-43b2-b528-3fb82a579a1c)
 
 #### Full code Screenshot:
+![Unguided 1 Full](https://github.com/AndreasBesar29/STRUKTUR-DATA-ASSIGNMENT/assets/161665251/a70cacb9-d465-4d01-99e4-8d2cc33ad0df)
 
 Kode diatas digunakan untuk mencetak hasil faktorial dari bilangan yang diinputkan oleh peng-input ke layar output dengan menggunakan function cout dan factorial untuk mengeksekusi program tersebut.
 
@@ -228,8 +236,10 @@ int main() {
 }
 ```
 #### Output:
+![Unguided 2 (1) Output](https://github.com/AndreasBesar29/STRUKTUR-DATA-ASSIGNMENT/assets/161665251/5a1c7586-6515-43ce-ae54-92625a97fac3)
 
 #### Full code Screenshot:
+![Unguided 2 (1) Full](https://github.com/AndreasBesar29/STRUKTUR-DATA-ASSIGNMENT/assets/161665251/06b8ddc3-984e-4db4-be3f-305c49c9a24e)
 
 Kode diatas digunakan untuk membuat struktur data mahasiswa dari nama, nim, dan ipk dengan  menggunakan struct  dan kemudian ditampilkan ke layar output dengan menggunakan function cout untuk mengelola programnya.
 
@@ -281,8 +291,10 @@ int main() {
 }
 ```
 #### Output:
+![Unguided 2 (2) Output](https://github.com/AndreasBesar29/STRUKTUR-DATA-ASSIGNMENT/assets/161665251/d7f69db0-a25a-4cb8-b0a3-f1e09450300d)
 
 #### Full code Screenshot:
+![Unguided 2 (2) Full](https://github.com/AndreasBesar29/STRUKTUR-DATA-ASSIGNMENT/assets/161665251/97581645-8191-4dd7-9cc2-6d77cc3cf14d)
 
 Kode diatas digunakan untuk mendefinisikan sebuah class mahasiswa yang bersifat privat seperti nama, nim, dan ipk dan bersifat publik pada input data dan user diminta untuk menginputkan datanya dan di layar output sistem langsung menunjukan data yang diinput oleh user.
 
@@ -327,8 +339,10 @@ int main() {
 }
 ```
 #### Output:
+![Unguided 3 Output](https://github.com/AndreasBesar29/STRUKTUR-DATA-ASSIGNMENT/assets/161665251/f7f7fb3e-95fc-40ff-8654-5884c5a9fb67)
 
 #### Full code Screenshot:
+![Unguided 3 Full](https://github.com/AndreasBesar29/STRUKTUR-DATA-ASSIGNMENT/assets/161665251/ddaab45c-79ac-40b8-b04f-51df02a7977d)
 
 Kode diatas digunakan untuk mencari plat nomor dengan cara menginputkan merk motor yang dicari oleh user dan di layar output memunculkan hasil dari yang diinputkan oleh user berupa plat nomor.
 
