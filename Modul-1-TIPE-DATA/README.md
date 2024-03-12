@@ -1,27 +1,28 @@
 # <h1 align="center">Laporan Praktikum Modul Tipe Data</h1>
 
 <p align="center">Andreas Besar Wibowo</p>
+<p align="center">2311102198 / IF-11-E</p>
 
 ## Dasar Teori
 Tipe data adalah sebuah cara untuk membedakan data berdasarkan dari jenis datanya. Tipe data juga diperlukan untuk komplier bisa mengerti data yang akan digunakan. 
 
 #### 1. TIPE DATA PRMITIF
 Tipe data primitive adalah tipe data yang ditentukan melalui sistemnya. Perbedaan dari setiap bahasa pemrograman yang digunakan adalah dari jumlah bitnya. Contoh dari tipe data primitive adalah :
-- Int : tipe data yang digunakan untuk bilangan bulat
-- Float : tipe data yang digunakan untuk bilangan desimal
-- Char : tipe data yang digunakan untuk huruf
-- Boolean : tipe data yang digunakan untuk nilai yang memiliki arti antara true dan false
+- Int : Tipe data yang digunakan untuk bilangan bulat
+- Float : Tipe data yang digunakan untuk bilangan desimal
+- Char : Tipe data yang digunakan untuk huruf
+- Boolean : Tipe data yang digunakan untuk nilai yang memiliki arti antara true dan false
 
 #### 2. TIPE DATA ABSTRAK
 Tipe data abstrak adalah tipe data yang dibuat oleh programmernya sendiri. Tipe data abstrak ini berisi dari berbagai banyak tipe data. Nilai nya juga bisa lebih dari satu dan berbagai tipe data
 
 #### 3. TIPE DATA KOLEKSI
 Tipe data koleksi adalah tipe data untuk menyimpan beberapa nilai secara bersamaan. Tipe data koleksi juga bisa mengelola banyak data dengan terstruktur. Contoh dari tipe data koleksi yaitu :
-- array : Array merupakan suatu struktur data statis yang menyimpan elemen-elemen dengan jenis data yang seragam. Elemen-elemen tersebut diakses melalui indeks tertentu. Ukuran array bersifat tetap dan harus ditentukan pada saat pendeklarasian.
+- Array : Array merupakan suatu struktur data statis yang menyimpan elemen-elemen dengan jenis data yang seragam. Elemen-elemen tersebut diakses melalui indeks tertentu. Ukuran array bersifat tetap dan harus ditentukan pada saat pendeklarasian.
 
-- Vector : vector adalah Standard Template Library (STL), mirip dengan array dalam hal menyimpan data dalam bentuk elemen-elemen yang alokasi memorinya dilakukan otomatis dan bersebelahan. Vector memiliki kemampuan untuk menangani jumlah elemen yang dinamis. Vector menyediakan fleksibilitas dalam mengelola koleksi data dengan kemampuan dinamisnya, yang memungkinkan penambahan atau pengurangan elemen tanpa harus khawatir tentang alokasi memorinya secara manual.
+- Vector : Vector adalah Standard Template Library (STL), mirip dengan array dalam hal menyimpan data dalam bentuk elemen-elemen yang alokasi memorinya dilakukan otomatis dan bersebelahan. Vector memiliki kemampuan untuk menangani jumlah elemen yang dinamis. Vector menyediakan fleksibilitas dalam mengelola koleksi data dengan kemampuan dinamisnya, yang memungkinkan penambahan atau pengurangan elemen tanpa harus khawatir tentang alokasi memorinya secara manual.
 
-- map : Map, mirip dengan array, memungkinkan penggunaan indeks, disebut "key", yang tidak terbatas pada tipe data integer. Pada map, indeks diberi nama "key". Bukan hanya integer, sehingga map memberikan fleksibilitas yang lebih besar dibandingkan dengan array konvensional. Implementasi std::map menggunakan struktur data pohon merah-hitam yang secara otomatis seimbang, memberikan efisiensi dalam operasi pencarian dan penyisipan data.
+- Map : Map, mirip dengan array, memungkinkan penggunaan indeks, disebut "key", yang tidak terbatas pada tipe data integer. Pada map, indeks diberi nama "key". Bukan hanya integer, sehingga map memberikan fleksibilitas yang lebih besar dibandingkan dengan array konvensional. Implementasi std::map menggunakan struktur data pohon merah-hitam yang secara otomatis seimbang, memberikan efisiensi dalam operasi pencarian dan penyisipan data.
 
 ## Guided 
 
@@ -67,8 +68,9 @@ int main()
     return 0;
 }
 ```
+#### Output:
 
-Kode di atas digunakan untuk mencetak teks "ini adalah file code guided praktikan" ke layar menggunakan function cout untuk mengeksekusi nya.
+Kode di atas digunakan untuk mencetak hasil dari penjumlahan, pengurangan, perkalian, dan pembagian atau bisa disebut juga kalkulator sederhana ke layar output dengan menggunakan function cout dan switch untuk menjalani atau mengeksekusi program tersebut.
 
 ### 2. [TIPE DATA ABSTRAK ]
 ```C++
@@ -103,8 +105,9 @@ int main()
     return 0;
 }
 ```
+#### Output:
 
-Kode di atas digunakan untuk mencetak teks "ini adalah file code guided praktikan" ke layar menggunakan function cout untuk mengeksekusi nya.
+Kode diatas digunakan untuk menyimpan data mahasiswa yang terdiri dari nama, alamat, dan umur ke layar output dengan menggunakan function printf agar bisa mengeksekusi program tersebut.
 
 ### 3. [TIPE DATA KOLEKSI]
 ```C++
@@ -129,8 +132,9 @@ int main()
 }
 
 ```
+#### Output:
 
-Kode di atas digunakan untuk mencetak teks "ini adalah file code guided praktikan" ke layar menggunakan function cout untuk mengeksekusi nya.
+Kode diatas digunakan untuk medeklarasi array nilai dengan nilai elemen bertipe integer dan mencetak masing masing dari integer tersebut ke layar output dan menggunakan function cout untuk mengeksekusinya.
 
 ## Unguided 
 
@@ -162,6 +166,12 @@ int main() {
 }
 
 ```
+#### Output:
+
+Kode diatas digunakan untuk mencetak hasil faktorial dari bilangan yang diinputkan oleh peng-input ke layar output dengan menggunakan function cout dan factorial untuk mengeksekusi program tersebut.
+
+
+#### Full code Screenshot:
 
 ### 2. [Jelaskan fungsi dari class dan struct secara detail dan berikan contoh programnya!]
 
@@ -212,6 +222,12 @@ int main() {
     return 0;
 }
 ```
+#### Output:
+
+Kode diatas digunakan untuk membuat struktur data mahasiswa dari nama, nim, dan ipk dengan  menggunakan struct  dan kemudian ditampilkan ke layar output dengan menggunakan function cout untuk mengelola programnya.
+
+#### Full code Screenshot:
+
 Contoh Untuk Fungsi Dari Class
 ```C++
 #include <iostream>
@@ -259,8 +275,13 @@ int main() {
     return 0;
 }
 ```
-### 3. [Buat dan jelaskan program menggunakan fungsi map dan jelaskan perbedaan dari 
-array dengan map!]
+#### Output:
+
+Kode diatas digunakan untuk mendefinisikan sebuah class mahasiswa yang bersifat privat seperti nama, nim, dan ipk dan bersifat publik pada input data dan user diminta untuk menginputkan datanya dan di layar output sistem langsung menunjukan data yang diinput oleh user.
+
+#### Full code Screenshot:
+
+### 3. [Buat dan jelaskan program menggunakan fungsi map dan jelaskan perbedaan dari array dengan map!]
 
 ```C++
 #include <iostream>
@@ -300,5 +321,16 @@ int main() {
     return 0;
 }
 ```
+#### Output:
+
+Kode diatas digunakan untuk mencari plat nomor dengan cara menginputkan merk motor yang dicari oleh user dan di layar output memunculkan hasil dari yang diinputkan oleh user berupa plat nomor.
+
+#### Full code Screenshot:
+
+## Kesimpulan
+Ringkasan dan interpretasi pandangan kalia dari hasil praktikum dan pembelajaran yang didapat[1].
+
+## Referensi
+[1] I. Holm, Narrator, and J. Fullerton-Smith, Producer, How to Build a Human [DVD]. London: BBC; 2002.
 
 
