@@ -138,22 +138,124 @@ Kode di atas digunakan untuk mencetak teks "ini adalah file code guided praktika
 
 ```C++
 #include <iostream>
+
 using namespace std;
 
+// Fungsi untuk memfaktorialkan suatu bilangan
+int factorial(int Bilangan) {
+    if (Bilangan == 0 || Bilangan == 1)
+        return 1;
+    else
+        return Bilangan * factorial(Bilangan - 1);
+}
+
 int main() {
-    cout << "ini adalah file code unguided praktikan" << endl;
+    int Bilangan;
+
+    cout << "Masukkan suatu bilangan: ";
+    cin >> Bilangan;
+
+    // Untuk menghitung faktorial dari sebuah bilangan
+    cout << "Bilangan Faktorial dari " << Bilangan << " adalah: " << factorial(Bilangan) << endl;
+
     return 0;
 }
+
 ```
 
 ### 2. [Jelaskan fungsi dari class dan struct secara detail dan berikan contoh programnya!]
 
+Contoh Untuk Fungsi Dari Struct
 ```C++
 #include <iostream>
+#include <string>
+
 using namespace std;
 
+// struct Mahasiswa
+struct Mahasiswa {
+    string nama;
+    int nim;
+    float ipk;
+};
+
+// memasukkan data mahasiswa
+void inputMahasiswa(Mahasiswa& mhs) {
+    cout << "Masukkan Nama Mahasiswa: ";
+    getline(cin, mhs.nama);
+
+    cout << "Masukkan NIM Mahasiswa: ";
+    cin >> mhs.nim;
+
+    cout << "Masukkan IPK Mahasiswa: ";
+    cin >> mhs.ipk;
+}
+
+// menampilkan data mahasiswa
+void tampilkanMahasiswa(const Mahasiswa& mhs) {
+    cout << "\nData Mahasiswa\n";
+    cout << "Nama: " << mhs.nama << endl;
+    cout << "NIM: " << mhs.nim << endl;
+    cout << "IPK: " << mhs.ipk << endl;
+}
+
 int main() {
-    cout << "ini adalah file code unguided praktikan" << endl;
+    // Mendefinisikan variabel bertipe struct Mahasiswa
+    Mahasiswa mahasiswa1;
+
+    // Memanggil fungsi inputMahasiswa untuk mengisi data mahasiswa1
+    inputMahasiswa(mahasiswa1);
+
+    // Memanggil fungsi tampilkanMahasiswa untuk menampilkan data mahasiswa1
+    tampilkanMahasiswa(mahasiswa1);
+
+    return 0;
+}
+```
+Contoh Untuk Fungsi Dari Class
+```C++
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+class Mahasiswa {
+private:
+    string nama;
+    int nim;
+    float ipk;
+
+public:
+    void inputData() {
+        cout << "Masukkan Nama Mahasiswa: ";
+        getline(cin, nama);
+
+        cout << "Masukkan NIM Mahasiswa: ";
+        cin >> nim;
+
+        cout << "Masukkan IPK Mahasiswa: ";
+        cin >> ipk;
+
+        cin.ignore();
+    }
+
+    void MenampilkanData() {
+        cout << "\nD Mahasiswa\n";
+        cout << "Nama: " << nama << endl;
+        cout << "NIM: " << nim << endl;
+        cout << "IPK: " << ipk << endl;
+    }
+};
+
+int main() {
+    Mahasiswa mahasiswa1;
+
+    // Memasukkan data mahasiswa
+    mahasiswa1.inputData();
+
+    // Menampilkan data mahasiswa
+    mahasiswa1.MenampilkanData();
+
     return 0;
 }
 ```
@@ -162,10 +264,39 @@ array dengan map!]
 
 ```C++
 #include <iostream>
+#include <map>
+#include <string>
+
 using namespace std;
 
+// Fungsi untuk menampilkan jenis motor berdasarkan plat nomor
+void tampilkanJenisMotor(const map<string, string>& dataMotor, const string& platNomor) {
+    auto it = dataMotor.find(platNomor);
+    
+    if (it != dataMotor.end()) {
+        cout << "Jenis motor untuk plat nomor " << platNomor << ": " << it->second << endl;
+    } else {
+        cout << "Plat nomor " << platNomor << " tidak ditemukan." << endl;
+    }
+}
+
 int main() {
-    cout << "ini adalah file code unguided praktikan" << endl;
+    // Membuat map untuk menyimpan data plat nomor dan jenis motor
+    map<string, string> dataMotor;
+
+    // Mengisi data plat nomor dan jenis motor
+    dataMotor["Honda"] = "R 7782 GA";
+    dataMotor["Suzuki"] = "K 7574 TY";
+    dataMotor["Yamaha"] = "H 6548 UW";
+
+    // Meminta input plat nomor dari pengguna
+    string MerkMotor;
+    cout << "Masukkan jenis motor: ";
+    cin >> MerkMotor;
+
+    // Menampilkan jenis motor berdasarkan plat nomor
+    tampilkanJenisMotor(dataMotor, MerkMotor);
+
     return 0;
 }
 ```
