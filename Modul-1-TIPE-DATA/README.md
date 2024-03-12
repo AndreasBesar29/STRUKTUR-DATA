@@ -22,3 +22,152 @@ Tipe data koleksi adalah tipe data untuk menyimpan beberapa nilai secara bersama
 - Vector : vector adalah Standard Template Library (STL), mirip dengan array dalam hal menyimpan data dalam bentuk elemen-elemen yang alokasi memorinya dilakukan otomatis dan bersebelahan. Vector memiliki kemampuan untuk menangani jumlah elemen yang dinamis. Vector menyediakan fleksibilitas dalam mengelola koleksi data dengan kemampuan dinamisnya, yang memungkinkan penambahan atau pengurangan elemen tanpa harus khawatir tentang alokasi memorinya secara manual.
 
 - map : Map, mirip dengan array, memungkinkan penggunaan indeks, disebut "key", yang tidak terbatas pada tipe data integer. Pada map, indeks diberi nama "key". Bukan hanya integer, sehingga map memberikan fleksibilitas yang lebih besar dibandingkan dengan array konvensional. Implementasi std::map menggunakan struktur data pohon merah-hitam yang secara otomatis seimbang, memberikan efisiensi dalam operasi pencarian dan penyisipan data.
+
+## Guided 
+
+### 1. [TIPE DATA PRIMITIF]
+```C++
+#include <iostream>
+
+using namespace std;
+
+// Main program
+int main()
+{
+    char op;
+    float num1, num2;
+    // It allows user to enter operator i.e. +, -, *, /
+    cin >> op;
+    // It allow user to enter the operands
+    cin >> num1 >> num2;
+    // Switch statement begins
+    switch (op)
+    {
+    // If user enter +
+    case '+':
+        cout << num1 + num2;
+        break;
+    // If user enter -
+    case '-':
+        cout << num1 - num2;
+        break;
+    // If user enter *
+    case '*':
+        cout << num1 * num2;
+        break;
+    // If user enter /
+    case '/':
+        cout << num1 / num2;
+        break;
+    // If the operator is other than +, -, * or /,
+    // error message will display
+    default:
+        cout << "Error! operator is not correct";
+    } // switch statement ends
+    return 0;
+}
+```
+
+Kode di atas digunakan untuk mencetak teks "ini adalah file code guided praktikan" ke layar menggunakan function cout untuk mengeksekusi nya.
+
+### 2. [TIPE DATA ABSTRAK ]
+```C++
+#include <stdio.h>
+// Struct
+struct Mahasiswa
+{
+    const char *name;
+    const char *address;
+    int age;
+};
+int main()
+{
+    // menggunakan struct
+    struct Mahasiswa mhs1, mhs2;
+    // mengisi nilai ke struct
+    mhs1.name = "Dian";
+    mhs1.address = "Mataram";
+    mhs1.age = 22;
+    mhs2.name = "Bambang";
+    mhs2.address = "Surabaya";
+    mhs2.age = 23;
+    // mencetak isi struct
+    printf("## Mahasiswa 1 ##\n");
+    printf("Nama: %s\n", mhs1.name);
+    printf("Alamat: %s\n", mhs1.address);
+    printf("Umur: %d\n", mhs1.age);
+    printf("## Mahasiswa 2 ##\n");
+    printf("Nama: %s\n", mhs2.name);
+    printf("Alamat: %s\n", mhs2.address);
+    printf("Umur: %d\n", mhs2.age);
+    return 0;
+}
+```
+
+Kode di atas digunakan untuk mencetak teks "ini adalah file code guided praktikan" ke layar menggunakan function cout untuk mengeksekusi nya.
+
+### 3. [TIPE DATA KOLEKSI]
+```C++
+#include <iostream>
+using namespace std;
+int main()
+{
+    // deklarasi dan inisialisasi array
+    int nilai[5];
+    nilai[0] = 23;
+    nilai[1] = 50;
+    nilai[2] = 34;
+    nilai[3] = 78;
+    nilai[4] = 90;
+    // mencetak array
+    cout << "Isi array pertama :" << nilai[0] << endl;
+    cout << "Isi array kedua :" << nilai[1] << endl;
+    cout << "Isi array ketiga :" << nilai[2] << endl;
+    cout << "Isi array keempat :" << nilai[3] << endl;
+    cout << "Isi array kelima :" << nilai[4] << endl;
+    return 0;
+}
+
+```
+
+Kode di atas digunakan untuk mencetak teks "ini adalah file code guided praktikan" ke layar menggunakan function cout untuk mengeksekusi nya.
+
+## Unguided 
+
+### 1. [Buatlah program menggunakan tipe data primitif minimal dua fungsi dan bebas. Menampilkan program, jelaskan program tersebut dan ambil kesimpulan dari materi tipe data primitif!]
+
+```C++
+#include <iostream>
+using namespace std;
+
+int main() {
+    cout << "ini adalah file code unguided praktikan" << endl;
+    return 0;
+}
+```
+
+### 2. [Jelaskan fungsi dari class dan struct secara detail dan berikan contoh programnya!]
+
+```C++
+#include <iostream>
+using namespace std;
+
+int main() {
+    cout << "ini adalah file code unguided praktikan" << endl;
+    return 0;
+}
+```
+### 3. [Buat dan jelaskan program menggunakan fungsi map dan jelaskan perbedaan dari 
+array dengan map!]
+
+```C++
+#include <iostream>
+using namespace std;
+
+int main() {
+    cout << "ini adalah file code unguided praktikan" << endl;
+    return 0;
+}
+```
+
+
