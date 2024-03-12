@@ -1,0 +1,44 @@
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+// struct Mahasiswa
+struct Mahasiswa {
+    string nama;
+    int nim;
+    float ipk;
+};
+
+// memasukkan data mahasiswa
+void inputMahasiswa(Mahasiswa& mhs) {
+    cout << "Masukkan Nama Mahasiswa: ";
+    getline(cin, mhs.nama);
+
+    cout << "Masukkan NIM Mahasiswa: ";
+    cin >> mhs.nim;
+
+    cout << "Masukkan IPK Mahasiswa: ";
+    cin >> mhs.ipk;
+}
+
+// menampilkan data mahasiswa
+void tampilkanMahasiswa(const Mahasiswa& mhs) {
+    cout << "\nData Mahasiswa\n";
+    cout << "Nama: " << mhs.nama << endl;
+    cout << "NIM: " << mhs.nim << endl;
+    cout << "IPK: " << mhs.ipk << endl;
+}
+
+int main() {
+    // Mendefinisikan variabel bertipe struct Mahasiswa
+    Mahasiswa mahasiswa1;
+
+    // Memanggil fungsi inputMahasiswa untuk mengisi data mahasiswa1
+    inputMahasiswa(mahasiswa1);
+
+    // Memanggil fungsi tampilkanMahasiswa untuk menampilkan data mahasiswa1
+    tampilkanMahasiswa(mahasiswa1);
+
+    return 0;
+}
