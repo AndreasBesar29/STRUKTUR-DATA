@@ -24,7 +24,7 @@ public:
     }
 
     void MenampilkanData() {
-        cout << "\nD Mahasiswa\n";
+        cout << "\nData Mahasiswa\n";
         cout << "Nama: " << nama << endl;
         cout << "NIM: " << nim << endl;
         cout << "IPK: " << ipk << endl;
