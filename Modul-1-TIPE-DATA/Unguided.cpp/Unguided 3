@@ -1,0 +1,36 @@
+#include <iostream>
+#include <map>
+#include <string>
+
+using namespace std;
+
+// Fungsi untuk menampilkan jenis motor berdasarkan plat nomor
+void tampilkanJenisMotor(const map<string, string>& dataMotor, const string& platNomor) {
+    auto it = dataMotor.find(platNomor);
+    
+    if (it != dataMotor.end()) {
+        cout << "Jenis motor untuk plat nomor " << platNomor << ": " << it->second << endl;
+    } else {
+        cout << "Plat nomor " << platNomor << " tidak ditemukan." << endl;
+    }
+}
+
+int main() {
+    // Membuat map untuk menyimpan data plat nomor dan jenis motor
+    map<string, string> dataMotor;
+
+    // Mengisi data plat nomor dan jenis motor
+    dataMotor["Honda"] = "R 7782 GA";
+    dataMotor["Suzuki"] = "K 7574 TY";
+    dataMotor["Yamaha"] = "H 6548 UW";
+
+    // Meminta input plat nomor dari pengguna
+    string MerkMotor;
+    cout << "Masukkan jenis motor: ";
+    cin >> MerkMotor;
+
+    // Menampilkan jenis motor berdasarkan plat nomor
+    tampilkanJenisMotor(dataMotor, MerkMotor);
+
+    return 0;
+}
