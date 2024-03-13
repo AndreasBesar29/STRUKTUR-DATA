@@ -180,13 +180,13 @@ int main() {
 
 Kode diatas digunakan untuk mencetak hasil faktorial dari bilangan yang diinputkan oleh peng-input ke layar output dengan menggunakan function cout dan factorial untuk mengeksekusi program tersebut.
 
-Tipe data primitif adalah cara komputer dalam hal menyimpan data dasar seperti angka dan huruf. Tipe integer yang ditampung juga hanya tipe data tertentu yaitu tipe data integer untuk bilangan bulat, tipe data float untuk bilangan desimal, tipe data char untuk huruf, tipe data boolean untuk menentukan 2 hal yaitu true dan false. Jadi, tipe data primitif adalah tempat untuk menyimpan huruf dan angka di dalam komputer.
+Tipe data primitif adalah cara komputer dalam hal menyimpan data dasar seperti angka dan huruf. Tipe integer yang ditampung juga hanya tipe data tertentu yaitu tipe data integer untuk bilangan bulat, tipe data float untuk bilangan desimal, tipe data char untuk huruf, tipe data boolean untuk menentukan 2 hal yaitu true dan false. Jadi, tipe data primitif adalah tempat untuk menyimpan huruf dan angka di dalam komputer. [3]
 
 ### 2. [Jelaskan fungsi dari class dan struct secara detail dan berikan contoh programnya!]
 
 Struct adalah struktur data yang memudahkan pengguna untuk menggabungkan beberapa jenis data yang berbeda. Mirip dengan fungsi class, struct bisa untuk menyimpan data, tetapi default anggotanya bersifat publik yang artinya semua anggotanya bisa diakses dari luar struct. Dengan menggunakan struct, program dengan mudah membuat dan memgelola kumpulan data tanpa adanya kompleksitas seperti pada fungsi class. Struct mempunyai kelebihan untuk menyimpan data simpel tanpa metode yang diutamakan dan memberikan fleksibilitas dalam membuat dan menyusun program.
 
-Class berfungsi sebagai template untuk menciptakan objek. Class adalah struktur yang menggabungkan antara dara dan fungsi untuk memproses data dalam suatu pemrograman. Class dapat membuat objek yang memiliki sifat yang sama. Data dalam class menunjukan karakteristik objek, sedangkan fungsi berguna untuk berinteraksi dengan data tersebut. Dengan menggunakan fungsi class, program bisa jauh lebih dimengerti dan mudah diatur dan juga bisa untuk mengatasi kompleksitas program secara terstruktur.
+Class berfungsi sebagai template untuk menciptakan objek. Class adalah struktur yang menggabungkan antara dara dan fungsi untuk memproses data dalam suatu pemrograman. Class dapat membuat objek yang memiliki sifat yang sama. Data dalam class menunjukan karakteristik objek, sedangkan fungsi berguna untuk berinteraksi dengan data tersebut. Dengan menggunakan fungsi class, program bisa jauh lebih dimengerti dan mudah diatur dan juga bisa untuk mengatasi kompleksitas program secara terstruktur.[2]
 
 Contoh Untuk Fungsi Dari Struct
 ```C++
@@ -351,7 +351,7 @@ Array dan map memiliki beberapa perbedaan , seperti :
 2. Dari Tipe data nya, Array merupakan struktur data untuk menyimpan elemen data dengan tipe yang sama dalam satu linier. Sedangkan map adalah struktur data untuk menyimpan pasangan kunci dan nilai. Kunci dan nilaipyn bisa dari tipe data yang berbeda.
 3. Dari Indeksnya, Array menggunakan indeks berbasis angka numerik mulai dari 0. Sedangkan map menggunakan data yang tidak terurut dan data diidentifikasi melalui kunci yang memiliki tipe data yang berbeda.
 
-Singkatnya, Array cocok untuk urutan data dengan indeks numerik dan map cocok untuk penugasan data dengan kunci yang dapat berupa tipe data apapun atau tipe data yang berbeda.
+Singkatnya, Array cocok untuk urutan data dengan indeks numerik dan map cocok untuk penugasan data dengan kunci yang dapat berupa tipe data apapun atau tipe data yang berbeda.[2]
 
 ## Kesimpulan
 Materi tipe data ini berisi beberapa data yang dapat di olah di dalam komputer seperti integer, float, char, dan lain lain. Tipe data abstrak berisi bahasan tentang konsep yang lebih tinggi, fokusnya adalah pada presentasi data dan operasi yang dapat dijalankan tanpa memperdulikan implementasi internal. Tipe data koleksi ini berisi tentang mengeksplorasi struktur data yang menyimpan beberapa elemen, seperti array, vector, dan map ini berguna juga untuk mengakses data dengan lebih cepat.
@@ -359,6 +359,9 @@ Materi tipe data ini berisi beberapa data yang dapat di olah di dalam komputer s
 Dari materi tipe data ini, pembelajaran yang didapat adalah pemahaman tentang berbagai tipe data yang dilakukan dan dapat digunakan dalam pemrograman, dan juga kegunaan dari tipe data abstrak dan koleksi yang lebih efisien dalam penggunaannya. Menguasai beberapa tipe data bisa lebih mudah untuk membuat suatu program dan memperluas kemampuan dalam memprogram dan mendata secara cepat.
 
 ## Referensi
-[1] Modul 1 - Tipe Data
-
-
+[1] Karumanchi, N. (2016). Data Structures and algorithms made easy: Concepts,
+problems, Interview Questions. CareerMonk Publications.
+TylerMSFT. (n.d.). Collections (C++/CX). diakses dari
+https://learn.microsoft.com/en-us/cpp/cppcx/collections-c-cx?view=msvc-170
+[2] Putra, M. T. D., Munawir, M., & Yuniarti, A. R. (2023). BELAJAR PEMROGRAMAN LANJUT DENGAN C++.
+[3] Pratama, Yogga. "Jenis-jenis tipe data."
