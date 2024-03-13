@@ -359,9 +359,7 @@ Materi tipe data ini berisi beberapa data yang dapat di olah di dalam komputer s
 Dari materi tipe data ini, pembelajaran yang didapat adalah pemahaman tentang berbagai tipe data yang dilakukan dan dapat digunakan dalam pemrograman, dan juga kegunaan dari tipe data abstrak dan koleksi yang lebih efisien dalam penggunaannya. Menguasai beberapa tipe data bisa lebih mudah untuk membuat suatu program dan memperluas kemampuan dalam memprogram dan mendata secara cepat.
 
 ## Referensi
-[1] Karumanchi, N. (2016). Data Structures and algorithms made easy: Concepts,
-problems, Interview Questions. CareerMonk Publications.
-TylerMSFT. (n.d.). Collections (C++/CX). diakses dari
-https://learn.microsoft.com/en-us/cpp/cppcx/collections-c-cx?view=msvc-170
-[2] Putra, M. T. D., Munawir, M., & Yuniarti, A. R. (2023). BELAJAR PEMROGRAMAN LANJUT DENGAN C++.
-[3] Pratama, Yogga. "Jenis-jenis tipe data."
+#### [1] Karumanchi, N. (2016). Data Structures and algorithms made easy: Concepts, problems, Interview Questions. CareerMonk Publications.
+- TylerMSFT. (n.d.). Collections (C++/CX). diakses dari https://learn.microsoft.com/en-us/cpp/cppcx/collections-c-cx?view=msvc-170
+#### [2] Putra, M. T. D., Munawir, M., & Yuniarti, A. R. (2023). BELAJAR PEMROGRAMAN LANJUT DENGAN C++.
+#### [3] Pratama, Yogga. "Jenis-jenis tipe data."
