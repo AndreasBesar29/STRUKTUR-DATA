@@ -485,5 +485,5 @@ Kode diatas digunakan untuk
 
 ## Referensi
 [1] Sihombing, J. (2019). Penerapan Stack Dan Queue Pada Array Dan Linked List Dalam Java. INFOKOM (Informatika & Komputer), 7(2), 15-24.
-[2] Kurniman Putra, A. Single linked list.
+[2] Kurniman Putra, A. Single linked list.                       
 [3] Siregar, A. A. N. (2019). Pengertian Linked Object.
