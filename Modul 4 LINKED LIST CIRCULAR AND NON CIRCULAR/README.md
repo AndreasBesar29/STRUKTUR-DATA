@@ -5,6 +5,27 @@
 
 ## Dasar Teori
 
+### Linked List
+Linked List Adalah koleksi data item yang tersusun dalam sebuah barisan secara linear, dengan penyisipan dan pemindahan dapat dilakukan dalam semua tempat di  tersebut[2].
+
+### Linked List Non Cicular
+Linked List Non Circular adalah struktur data yang terdiri dari serangkaian node, di mana setiap node memiliki dua pointer: satu untuk menunjuk ke node berikutnya dalam urutan, dan yang lainnya untuk menunjuk ke node sebelumnya. Ini berbeda dengan linked list sirkular di mana node terakhir menunjuk kembali ke node pertama[1]. Didalam Linked List Non Circular, terdapat Single dan Double Linked List Non Circular yaitu :
+
+#### 1. Single Linked List Non Circular
+Setiap node pada linked list mempunyai field yang berisi data dan pointer ke node berikutnya & ke node sebelumnya. Untuk pembentukan node baru, mulanya pointer next dan prev akan menunjuk ke nilai NULL. Selanjutnya pointer prev akan menunjuk ke node sebelumnya, dan pointer next akan menunjuk ke node selanjutnya pada list[1].
+
+#### 2. Double Linked List Non Circular 
+Double Linked List Non Circular adalah linked list dengan menggunakan pointer, dimana setiap node memiliki 3 field, yaitu 1 field pointer yang menunjuk pointer berikutnya (next), 1 field menunjuk pointer sebelumnya (prev), serta sebuah field yang berisi data untuk node tersebut[1]
+
+### Linked List Circular
+Linked List Circular Adalah Double / single Linked List yang simpul terakhirnya menunjuk ke simpul awal, dan simpul awalnya menunjuk ke simpul akhir, atau dapat disebut LL yang dibuat seakanakan merupakan sebuah lingkaran dengan titik awal dan titik akhir saling bersebelahan jika Linked List tersebut masih kosong[2]. Didalam Linked List Circular, terdapat Single dan Double Linked List Circular yaitu :
+
+#### 1. Single Linked List Circular
+Single Linked List yang pointer nextnya menunjuk pada dirinya sendiri. Jika Single Linked List tersebut terdiri dari beberapa node, maka pointer next pada node terakhir akan menunjuk ke node terdepannya[2].
+
+#### 2. Double Linked List Circular
+Setiap node pada linked list mempunyai field yang berisi data dan pointer ke node berikutnya & ke node sebelumnya. Untuk pembentukan node baru, mulanya pointer next dan prev akan menunjuk ke dirinya sendiri. Jika sudah lebih dari satu node, maka pointer prev akan menunjuk ke node sebelumnya, dan pointer next akan menunjuk ke node sesudahnya[1].
+
 ## Guided
 ### 1. [Linked List Non Circular]
 ```C++
@@ -626,8 +647,13 @@ Kode diatas digunakan untuk
 Kode di atas digunakan untuk
 
 ## Kesimpulan
+Linked List adalah struktur data linear yang terdiri dari serangkaian node. Terdapat beberapa jenis Linked List, termasuk Single Linked List Non Circular, Double Linked List Non Circular, Single Linked List Circular, dan Double Linked List Circular. Setiap jenis Linked List memiliki karakteristik dan penggunaan yang berbeda. Misalnya, Single Linked List Non Circular memiliki setiap node dengan pointer next yang menunjuk ke node berikutnya, sementara Double Linked List Non Circular memiliki tambahan pointer prev yang menunjuk ke node sebelumnya. Linked List Circular memiliki simpul terakhir yang menunjuk kembali ke simpul pertama, membentuk lingkaran. Ini memungkinkan fleksibilitas dalam penyisipan dan penghapusan data dalam struktur data tersebut.
+
+Dari materi Linked List Circular dan Non Circular, pembelajaran yang dapat diambil adalah pemahaman yang lebih baik tentang berbagai jenis Linked List dan aplikasi praktisnya dalam pemrograman. Dengan memahami perbedaan antara Single Linked List Non Circular, Double Linked List Non Circular, Single Linked List Circular, dan Double Linked List Circular, kita dapat memilih solusi yang paling sesuai dengan kebutuhan pengembangan perangkat lunak. Hal ini penting untuk pengembangan perangkat lunak yang efisien dan efektif.
 
 ## Referensi
+[1] Kurniman Putra, A. List linier (linked list) dan variasinya_struktur data.                                                                 
+[2] Arraffi, A. (2019). PENGERTIAN LINIER DALAM STRUKTUR DATA MAJEMUK.
 
 
 
