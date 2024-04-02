@@ -350,6 +350,8 @@ int main()
 }
 ```
 #### Output:
+![Output Guided 1](https://github.com/AndreasBesar29/STRUKTUR-DATA-ASSIGNMENT/assets/161665251/41042fd3-adfe-4461-abc0-c130f665f45a)
+
 Kode diatas digunakan untuk mengimplementasikan fungsi untuk menambah, menghapus, mengubah, dan menampilkan elemen-elemen yang terdapat di dalam linked list. Output yang ditampilkan adalah angka angka yang dimasukkan pada fungsi "init".
 
 ### 2. [Linked List Circular]
@@ -634,6 +636,7 @@ int main()
 }
 ```
 #### Output:
+![Output Guided 2](https://github.com/AndreasBesar29/STRUKTUR-DATA-ASSIGNMENT/assets/161665251/284c8b06-b0b5-4467-ae69-e5f62f094223)
 
 Kode diatas digunakan untuk mengimplementasikan fungsi untuk menambahkan node depan, belakang, dan di tengah linked list. Bisa juga menghapus node depan, belakang, dan di tengah linked list. Output yang ditampilkan yaitu elemen - elemen yang dimasukkan pada fungsi "init".
 
@@ -981,6 +984,15 @@ int main() {
 
 ```
 #### Output:
+![Output Unguided 1 (1)](https://github.com/AndreasBesar29/STRUKTUR-DATA-ASSIGNMENT/assets/161665251/415297f3-0ecf-4209-b480-fe5d69796bec)
+![Output Unguided 1 (2)](https://github.com/AndreasBesar29/STRUKTUR-DATA-ASSIGNMENT/assets/161665251/cbb1edf1-9364-4fe7-8b86-96b126dfbc0e)
+![Output Unguided 1 (3)](https://github.com/AndreasBesar29/STRUKTUR-DATA-ASSIGNMENT/assets/161665251/9a631848-0dcf-4b7f-81e3-9c4ae5328c28)
+![Output Unguided 1 (4)](https://github.com/AndreasBesar29/STRUKTUR-DATA-ASSIGNMENT/assets/161665251/a2a20a6e-86d9-4aaa-b33d-8e45d6aeac2d)
+![Output Unguided 1 (5)](https://github.com/AndreasBesar29/STRUKTUR-DATA-ASSIGNMENT/assets/161665251/62ee13f0-1cb0-4449-8719-6f1ca0d78686)
+![Output Unguided 1 (6)](https://github.com/AndreasBesar29/STRUKTUR-DATA-ASSIGNMENT/assets/161665251/84fddb0a-f3f8-4ca8-83dd-15ba7866e63d)
+![Output Unguided 1 (7)](https://github.com/AndreasBesar29/STRUKTUR-DATA-ASSIGNMENT/assets/161665251/5ee5b7e9-640b-4fdc-860d-fe80752efd3f)
+![Output Unguided 1 (8)](https://github.com/AndreasBesar29/STRUKTUR-DATA-ASSIGNMENT/assets/161665251/e8238518-fefe-4559-bf4f-b44b1d7199f9)
+![Output Unguided 1 (9)](https://github.com/AndreasBesar29/STRUKTUR-DATA-ASSIGNMENT/assets/161665251/04691668-48bd-471e-a045-4e414a7b7a58)
 
 Kode diatas digunakan untuk mengelola data mahasiswa yaitu Nama dan NIM. Di dalam program ini terdapat operasi seperti menambahkan, mengurangkan, mengganti data di depan, belakang, dan tengah. Output pada programnya adalah menu operasi yang ditawarkan dalam programnya. Program pun bisa menampilkan seluruh data yang ada di dalam linked list.
 
