@@ -350,7 +350,7 @@ int main()
 }
 ```
 #### Output:
-Kode diatas digunakan untuk
+Kode diatas digunakan untuk mengimplementasikan fungsi untuk menambah, menghapus, mengubah, dan menampilkan elemen-elemen yang terdapat di dalam linked list. Output yang ditampilkan adalah angka angka yang dimasukkan pada fungsi "init".
 
 ### 2. [Linked List Circular]
 ```C++
@@ -635,7 +635,7 @@ int main()
 ```
 #### Output:
 
-Kode diatas digunakan untuk
+Kode diatas digunakan untuk mengimplementasikan fungsi untuk menambahkan node depan, belakang, dan di tengah linked list. Bisa juga menghapus node depan, belakang, dan di tengah linked list. Output yang ditampilkan yaitu elemen - elemen yang dimasukkan pada fungsi "init".
 
 ## Unguided 
 ### 1. [Buatlah program menu Linked List Non Circular untuk menyimpan Nama dan NIM mahasiswa, dengan menggunakan input dari user.]
@@ -982,7 +982,7 @@ int main() {
 ```
 #### Output:
 
-Kode di atas digunakan untuk
+Kode diatas digunakan untuk mengelola data mahasiswa yaitu Nama dan NIM. Di dalam program ini terdapat operasi seperti menambahkan, mengurangkan, mengganti data di depan, belakang, dan tengah. Output pada programnya adalah menu operasi yang ditawarkan dalam programnya. Program pun bisa menampilkan seluruh data yang ada di dalam linked list.
 
 ## Kesimpulan
 Linked List adalah struktur data linear yang terdiri dari serangkaian node. Terdapat beberapa jenis Linked List, termasuk Single Linked List Non Circular, Double Linked List Non Circular, Single Linked List Circular, dan Double Linked List Circular. Setiap jenis Linked List memiliki karakteristik dan penggunaan yang berbeda. Misalnya, Single Linked List Non Circular memiliki setiap node dengan pointer next yang menunjuk ke node berikutnya, sementara Double Linked List Non Circular memiliki tambahan pointer prev yang menunjuk ke node sebelumnya. Linked List Circular memiliki simpul terakhir yang menunjuk kembali ke simpul pertama, membentuk lingkaran. Ini memungkinkan fleksibilitas dalam penyisipan dan penghapusan data dalam struktur data tersebut.
