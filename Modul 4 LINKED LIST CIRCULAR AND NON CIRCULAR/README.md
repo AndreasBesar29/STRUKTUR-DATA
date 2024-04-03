@@ -641,7 +641,7 @@ int main()
 Kode diatas digunakan untuk mengimplementasikan fungsi untuk menambahkan node depan, belakang, dan di tengah linked list. Bisa juga menghapus node depan, belakang, dan di tengah linked list. Output yang ditampilkan yaitu elemen - elemen yang dimasukkan pada fungsi "init".
 
 ## Unguided 
-### 1. [Buatlah program menu Linked List Non Circular untuk menyimpan Nama dan NIM mahasiswa, dengan menggunakan input dari user.]
+### 1. [Buatlah program menu Linked List Circular untuk menyimpan Nama dan NIM mahasiswa, dengan menggunakan input dari user.]
 ```C++
 // Andreas Besar Wibowo
 // 2311102198 IF 11 E
@@ -662,10 +662,12 @@ struct Node {
 class LinkedList {
 private:
     Node* head;
+    Node* tail;
 
 public:
     LinkedList() {
         head = NULL;
+        tail = NULL;
     }
 
     // Untuk Tambah Depan
@@ -675,10 +677,12 @@ public:
         newNode->Nim_Mahasiswa = Nim_Mahasiswa;
         if (head == NULL) {
             head = newNode;
+            tail = newNode;
             newNode->next = head;
         } else {
-            newNode->next = head->next;
-            head->next = newNode;
+            newNode->next = head;
+            tail->next = newNode;
+            head = newNode;
         }
         cout << "Data telah ditambahkan" << endl;
     }
@@ -688,13 +692,15 @@ public:
         Node* newNode = new Node;
         newNode->Nama_Mahasiswa = Nama_Mahasiswa;
         newNode->Nim_Mahasiswa = Nim_Mahasiswa;
+
         if (head == NULL) {
             head = newNode;
+            tail = newNode;
             newNode->next = head;
         } else {
-            newNode->next = head->next;
-            head->next = newNode;
-            head = newNode;
+            newNode->next = head;
+            tail->next = newNode;
+            tail = newNode;
         }
         cout << "Data telah ditambahkan" << endl;
     }
@@ -712,7 +718,7 @@ public:
 
         Node* current = head;
         for (int i = 1; i < posisi - 1; i++) {
-            if (current->next == head) {
+            if (current == tail) {
                 cout << "Posisi Tidak Terjangkau" << endl;
                 return;
             }
@@ -721,6 +727,10 @@ public:
 
         newNode->next = current->next;
         current->next = newNode;
+
+        if (current == tail) {
+            tail = newNode;
+        }
 
         cout << "Data telah ditambahkan" << endl;
     }
@@ -731,20 +741,29 @@ public:
             cout << "List Kosong !" << endl;
             return;
         }
-        cout << "Data " << head->next->Nama_Mahasiswa << " telah diganti dengan data " << Nama_Mahasiswa << endl;
-        head->next->Nama_Mahasiswa = Nama_Mahasiswa;
-        head->next->Nim_Mahasiswa = Nim_Mahasiswa;
+        cout << "Data " << head->Nama_Mahasiswa << " telah diganti dengan data " << Nama_Mahasiswa << endl;
+        head->Nama_Mahasiswa = Nama_Mahasiswa;
+        head->Nim_Mahasiswa = Nim_Mahasiswa;
     }
 
     // Untuk Ubah Belakang
-    void GantiBelakang(string Nama_MahasiswaBaru, string Nim_MahasiswaBaru) {
+    void GantiBelakang(string Nama_Mahasiswa, string Nama_MahasiswaBaru, string Nim_MahasiswaBaru) {
         if (head == NULL) {
             cout << "List Kosong !" << endl;
             return;
         }
-        head->Nama_Mahasiswa = Nama_MahasiswaBaru;
-        head->Nim_Mahasiswa = Nim_MahasiswaBaru;
-        cout << "Data " << Nama_MahasiswaBaru << " telah diganti dengan data " << head->Nama_Mahasiswa << endl;
+
+        Node* current = head;
+        do {
+            if (current->Nama_Mahasiswa == Nama_Mahasiswa) {
+                current->Nama_Mahasiswa = Nama_MahasiswaBaru;
+                current->Nim_Mahasiswa = Nim_MahasiswaBaru;
+                cout << "Data " << Nama_Mahasiswa << " berhasil diganti dengan data " << Nama_MahasiswaBaru << endl;
+                return;
+            }
+            current = current->next;
+        } while (current != head);
+        cout << "Data " << Nama_Mahasiswa << " tidak ditemukan" << endl;
     }
 
     // Untuk Ubah Tengah
@@ -768,22 +787,24 @@ public:
     }
 
     // Untuk Hapus Depan
-    void HapusDepan() {
-        if (head == NULL) {
-            cout << "List Kosong !" << endl;
-            return;
-        }
-        Node* temp = head->next;
-        if (temp == head) {
-            cout << "Data " << temp->Nama_Mahasiswa << " berhasil dihapus" << endl;
-            delete temp;
-            head = NULL;
-        } else {
-            head->next = temp->next;
-            cout << "Data " << temp->Nama_Mahasiswa << " berhasil dihapus" << endl;
-            delete temp;
-        }
+   void HapusDepan() {
+    if (head == NULL) {
+        cout << "List Kosong !" << endl;
+        return;
     }
+    Node* temp = head;
+    if (temp->next == head) { 
+        cout << "Data " << temp->Nama_Mahasiswa << " berhasil dihapus" << endl;
+        delete temp;
+        head = NULL;
+        tail = NULL;
+    } else {
+        cout << "Data " << head->Nama_Mahasiswa << " berhasil dihapus" << endl;
+        tail->next = head->next; 
+        head = head->next;
+        delete temp;
+    }
+}
 
     // Untuk Hapus Belakang
     void Hapusbelakang() {
@@ -791,19 +812,24 @@ public:
             cout << "List Kosong !" << endl;
             return;
         }
-        Node* current = head->next;
-        if (current == head) {
-            cout << "Data " << current->Nama_Mahasiswa << " berhasil dihapus" << endl;
-            delete current;
+
+        if (head->next == head) {
+            cout << "Data terakhir (" << head->Nama_Mahasiswa << ") berhasil dihapus" << endl;
+            delete head;
             head = NULL;
-        } else {
-            while (current->next != head) {
-                current = current->next;
-            }
-            cout << "Data " << current->next->Nama_Mahasiswa << " berhasil dihapus" << endl;
-            delete current->next;
-            current->next = head;
+            tail = NULL;
+            return;
         }
+
+        Node* current = head;
+        Node* prev = NULL;
+        while (current->next != head) {
+            prev = current;
+            current = current->next;
+        }
+        prev->next = current->next;
+        cout << "Data terakhir (" << current->Nama_Mahasiswa << ") berhasil dihapus" << endl;
+        delete current;
     }
 
     // Untuk Hapus Tengah
@@ -849,6 +875,7 @@ public:
         }
         delete head;
         head = NULL;
+        tail = NULL;
     }
 
     // Untuk Tampilan List
@@ -862,11 +889,11 @@ public:
         cout << setw(15) << left << "|   Nama  " << "|   NIM    " << "   |" << endl;
         cout << "------------------------------" << endl;
 
-        Node* current = head->next;
+        Node* current = head;
         do {
             cout << "|" << setw(14) << current->Nama_Mahasiswa << "|" << setw(10) << current->Nim_Mahasiswa << "   |" << endl;
             current = current->next;
-        } while (current != head->next);
+        } while (current != head);
 
         cout << "------------------------------" << endl;
     }
@@ -893,7 +920,7 @@ int main() {
         cout << "10. Hapus List" << endl;
         cout << "11. Tampilan" << endl;
         cout << "0. Keluar" << endl;
-        cout << "Pilih operasi (0-11) : " ;
+        cout << "Pilih operasi (0-11) : ";
         cin >> pilihan;
 
         switch (pilihan) {
@@ -933,11 +960,13 @@ int main() {
                 break;
             case 5:
                 cout << "-Mengubah List Belakang-" << endl;
-                cout << "Masukkan Nama Mahasiswa baru : ";
+                cout << "Masukkan Nama Mahasiswa yang ingin diganti: ";
+                cin >> Nama_Mahasiswa;
+                cout << "Masukkan Nama Mahasiswa baru: ";
                 cin >> Nama_MahasiswaBaru;
-                cout << "Masukkan NIM Mahasiswa baru : ";
+                cout << "Masukkan NIM Mahasiswa baru: ";
                 cin >> Nim_MahasiswaBaru;
-                linkedList.GantiBelakang(Nama_MahasiswaBaru, Nim_MahasiswaBaru);
+                linkedList.GantiBelakang(Nama_Mahasiswa, Nama_MahasiswaBaru, Nim_MahasiswaBaru);
                 break;
             case 6:
                 cout << "-Mengubah List Tengah-" << endl;
@@ -950,7 +979,7 @@ int main() {
                 linkedList.GantiTengah(Nama_MahasiswaBaru, Nim_MahasiswaBaru, posisi);
                 break;
             case 7:
-                cout << "-Menhapus List Depan-" << endl;
+                cout << "-Menghapus List Depan-" << endl;
                 linkedList.HapusDepan();
                 break;
             case 8:
@@ -982,8 +1011,19 @@ int main() {
     return 0;
 }
 
+
 ```
 #### Output:
+![Output Unguided 1 (1)](https://github.com/AndreasBesar29/STRUKTUR-DATA-ASSIGNMENT/assets/161665251/731f46e8-4b65-4b2a-9dfb-e43436d82f19)
+![Output Unguided 1 (2)](https://github.com/AndreasBesar29/STRUKTUR-DATA-ASSIGNMENT/assets/161665251/ebf12323-308c-45ec-897d-6c0fb4120f6b)
+![Output Unguided 1 (3)](https://github.com/AndreasBesar29/STRUKTUR-DATA-ASSIGNMENT/assets/161665251/0da6986b-3a28-4d26-8902-5b6bc6a319e0)
+![Output Unguided 1 (4)](https://github.com/AndreasBesar29/STRUKTUR-DATA-ASSIGNMENT/assets/161665251/fe9195b2-08da-4383-817e-d3dd62f34f41)
+![Output Unguided 1 (5)](https://github.com/AndreasBesar29/STRUKTUR-DATA-ASSIGNMENT/assets/161665251/7faf6def-c595-48d8-b181-f44245114d91)
+![Output Unguided 1 (6)](https://github.com/AndreasBesar29/STRUKTUR-DATA-ASSIGNMENT/assets/161665251/afe29098-4ad9-4ead-8968-906529311795)
+![Output Unguided 1 (7)](https://github.com/AndreasBesar29/STRUKTUR-DATA-ASSIGNMENT/assets/161665251/ffd09d5b-8ce7-45c8-a244-8f035fd6cbc4)
+![Output Unguided 1 (8)](https://github.com/AndreasBesar29/STRUKTUR-DATA-ASSIGNMENT/assets/161665251/0e19f860-2b00-40d6-bb22-eb5bb72b8867)
+![Output Unguided 1 (9)](https://github.com/AndreasBesar29/STRUKTUR-DATA-ASSIGNMENT/assets/161665251/13d194dd-8214-4c89-aa5c-53ed47a320a3)
+![Output Unguided 1 (10)](https://github.com/AndreasBesar29/STRUKTUR-DATA-ASSIGNMENT/assets/161665251/560cd4ee-fd40-45a4-937a-17b971b04a3d)
 
 
 Kode diatas digunakan untuk mengelola data mahasiswa yaitu Nama dan NIM. Di dalam program ini terdapat operasi seperti menambahkan, mengurangkan, mengganti data di depan, belakang, dan tengah. Output pada programnya adalah menu operasi yang ditawarkan dalam programnya. Program pun bisa menampilkan seluruh data yang ada di dalam linked list.
