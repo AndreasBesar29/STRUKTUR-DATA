@@ -17,10 +17,12 @@ struct Node {
 class LinkedList {
 private:
     Node* head;
+    Node* tail;
 
 public:
     LinkedList() {
         head = NULL;
+        tail = NULL;
     }
 
     // Untuk Tambah Depan
@@ -30,10 +32,12 @@ public:
         newNode->Nim_Mahasiswa = Nim_Mahasiswa;
         if (head == NULL) {
             head = newNode;
+            tail = newNode;
             newNode->next = head;
         } else {
-            newNode->next = head->next;
-            head->next = newNode;
+            newNode->next = head;
+            tail->next = newNode;
+            head = newNode;
         }
         cout << "Data telah ditambahkan" << endl;
     }
@@ -43,13 +47,15 @@ public:
         Node* newNode = new Node;
         newNode->Nama_Mahasiswa = Nama_Mahasiswa;
         newNode->Nim_Mahasiswa = Nim_Mahasiswa;
+
         if (head == NULL) {
             head = newNode;
+            tail = newNode;
             newNode->next = head;
         } else {
-            newNode->next = head->next;
-            head->next = newNode;
-            head = newNode;
+            newNode->next = head;
+            tail->next = newNode;
+            tail = newNode;
         }
         cout << "Data telah ditambahkan" << endl;
     }
@@ -67,7 +73,7 @@ public:
 
         Node* current = head;
         for (int i = 1; i < posisi - 1; i++) {
-            if (current->next == head) {
+            if (current == tail) {
                 cout << "Posisi Tidak Terjangkau" << endl;
                 return;
             }
@@ -76,6 +82,10 @@ public:
 
         newNode->next = current->next;
         current->next = newNode;
+
+        if (current == tail) {
+            tail = newNode;
+        }
 
         cout << "Data telah ditambahkan" << endl;
     }
@@ -86,20 +96,29 @@ public:
             cout << "List Kosong !" << endl;
             return;
         }
-        cout << "Data " << head->next->Nama_Mahasiswa << " telah diganti dengan data " << Nama_Mahasiswa << endl;
-        head->next->Nama_Mahasiswa = Nama_Mahasiswa;
-        head->next->Nim_Mahasiswa = Nim_Mahasiswa;
+        cout << "Data " << head->Nama_Mahasiswa << " telah diganti dengan data " << Nama_Mahasiswa << endl;
+        head->Nama_Mahasiswa = Nama_Mahasiswa;
+        head->Nim_Mahasiswa = Nim_Mahasiswa;
     }
 
     // Untuk Ubah Belakang
-    void GantiBelakang(string Nama_MahasiswaBaru, string Nim_MahasiswaBaru) {
+    void GantiBelakang(string Nama_Mahasiswa, string Nama_MahasiswaBaru, string Nim_MahasiswaBaru) {
         if (head == NULL) {
             cout << "List Kosong !" << endl;
             return;
         }
-        head->Nama_Mahasiswa = Nama_MahasiswaBaru;
-        head->Nim_Mahasiswa = Nim_MahasiswaBaru;
-        cout << "Data " << Nama_MahasiswaBaru << " telah diganti dengan data " << head->Nama_Mahasiswa << endl;
+
+        Node* current = head;
+        do {
+            if (current->Nama_Mahasiswa == Nama_Mahasiswa) {
+                current->Nama_Mahasiswa = Nama_MahasiswaBaru;
+                current->Nim_Mahasiswa = Nim_MahasiswaBaru;
+                cout << "Data " << Nama_Mahasiswa << " berhasil diganti dengan data " << Nama_MahasiswaBaru << endl;
+                return;
+            }
+            current = current->next;
+        } while (current != head);
+        cout << "Data " << Nama_Mahasiswa << " tidak ditemukan" << endl;
     }
 
     // Untuk Ubah Tengah
@@ -123,22 +142,24 @@ public:
     }
 
     // Untuk Hapus Depan
-    void HapusDepan() {
-        if (head == NULL) {
-            cout << "List Kosong !" << endl;
-            return;
-        }
-        Node* temp = head->next;
-        if (temp == head) {
-            cout << "Data " << temp->Nama_Mahasiswa << " berhasil dihapus" << endl;
-            delete temp;
-            head = NULL;
-        } else {
-            head->next = temp->next;
-            cout << "Data " << temp->Nama_Mahasiswa << " berhasil dihapus" << endl;
-            delete temp;
-        }
+   void HapusDepan() {
+    if (head == NULL) {
+        cout << "List Kosong !" << endl;
+        return;
     }
+    Node* temp = head;
+    if (temp->next == head) { 
+        cout << "Data " << temp->Nama_Mahasiswa << " berhasil dihapus" << endl;
+        delete temp;
+        head = NULL;
+        tail = NULL;
+    } else {
+        cout << "Data " << head->Nama_Mahasiswa << " berhasil dihapus" << endl;
+        tail->next = head->next; 
+        head = head->next;
+        delete temp;
+    }
+}
 
     // Untuk Hapus Belakang
     void Hapusbelakang() {
@@ -146,19 +167,24 @@ public:
             cout << "List Kosong !" << endl;
             return;
         }
-        Node* current = head->next;
-        if (current == head) {
-            cout << "Data " << current->Nama_Mahasiswa << " berhasil dihapus" << endl;
-            delete current;
+
+        if (head->next == head) {
+            cout << "Data terakhir (" << head->Nama_Mahasiswa << ") berhasil dihapus" << endl;
+            delete head;
             head = NULL;
-        } else {
-            while (current->next != head) {
-                current = current->next;
-            }
-            cout << "Data " << current->next->Nama_Mahasiswa << " berhasil dihapus" << endl;
-            delete current->next;
-            current->next = head;
+            tail = NULL;
+            return;
         }
+
+        Node* current = head;
+        Node* prev = NULL;
+        while (current->next != head) {
+            prev = current;
+            current = current->next;
+        }
+        prev->next = current->next;
+        cout << "Data terakhir (" << current->Nama_Mahasiswa << ") berhasil dihapus" << endl;
+        delete current;
     }
 
     // Untuk Hapus Tengah
@@ -204,6 +230,7 @@ public:
         }
         delete head;
         head = NULL;
+        tail = NULL;
     }
 
     // Untuk Tampilan List
@@ -217,11 +244,11 @@ public:
         cout << setw(15) << left << "|   Nama  " << "|   NIM    " << "   |" << endl;
         cout << "------------------------------" << endl;
 
-        Node* current = head->next;
+        Node* current = head;
         do {
             cout << "|" << setw(14) << current->Nama_Mahasiswa << "|" << setw(10) << current->Nim_Mahasiswa << "   |" << endl;
             current = current->next;
-        } while (current != head->next);
+        } while (current != head);
 
         cout << "------------------------------" << endl;
     }
@@ -248,7 +275,7 @@ int main() {
         cout << "10. Hapus List" << endl;
         cout << "11. Tampilan" << endl;
         cout << "0. Keluar" << endl;
-        cout << "Pilih operasi (0-11) : " ;
+        cout << "Pilih operasi (0-11) : ";
         cin >> pilihan;
 
         switch (pilihan) {
@@ -288,11 +315,13 @@ int main() {
                 break;
             case 5:
                 cout << "-Mengubah List Belakang-" << endl;
-                cout << "Masukkan Nama Mahasiswa baru : ";
+                cout << "Masukkan Nama Mahasiswa yang ingin diganti: ";
+                cin >> Nama_Mahasiswa;
+                cout << "Masukkan Nama Mahasiswa baru: ";
                 cin >> Nama_MahasiswaBaru;
-                cout << "Masukkan NIM Mahasiswa baru : ";
+                cout << "Masukkan NIM Mahasiswa baru: ";
                 cin >> Nim_MahasiswaBaru;
-                linkedList.GantiBelakang(Nama_MahasiswaBaru, Nim_MahasiswaBaru);
+                linkedList.GantiBelakang(Nama_Mahasiswa, Nama_MahasiswaBaru, Nim_MahasiswaBaru);
                 break;
             case 6:
                 cout << "-Mengubah List Tengah-" << endl;
@@ -305,7 +334,7 @@ int main() {
                 linkedList.GantiTengah(Nama_MahasiswaBaru, Nim_MahasiswaBaru, posisi);
                 break;
             case 7:
-                cout << "-Menhapus List Depan-" << endl;
+                cout << "-Menghapus List Depan-" << endl;
                 linkedList.HapusDepan();
                 break;
             case 8:
@@ -336,5 +365,3 @@ int main() {
 
     return 0;
 }
-
-
