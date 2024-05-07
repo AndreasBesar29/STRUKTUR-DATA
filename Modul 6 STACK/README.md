@@ -286,7 +286,9 @@ int main() {
 Kode diatas digunakan untuk membalikkan huruf di dalam kalimat dari huruf kapitalnya atau tidak. Program ini juga menggunakan program fungsi stack untuk menyimpan dan membuat kalimat secara terbalik dan mengurutkan huruf atau karakternya.
 
 ## Kesimpulan
+Kesimpulan dari materi ini adalah stack merupakan struktur data yang penting dalam pemrograman, dan mengikuti prinsip LIFO (Last In, First Out). Stack menerapkan fungsi penambahan dan penghapusan elemen di bagian atasnya dan memiliki beberapa fungsi lain yaitu Push, Pop, Clear, IsEmpty, dan IsFull. Selain itu, stack juga berguna untuk algoritma backtracking, rekursif dan lain-lain.
 
+Dalam pembelajaran materi ini, saya memperoleh pemahaman tentang struktur data stack yang berkembang dalam perangkat lunak (software). Dengan memahami konserp dasar stavk dan operasinya, mengembangkannya dapat lebih efisien dan memudahkan dalam merancang solusi dari perangkat lunak. Hal ini menunjukan bahwa pengetahuan struktur data terkhusus stack dapat mengembangakan software lebih efektif dan efisien.
 ## Referensi
 [1] Holle, Khadijah Fahmi Hayati. (2022). Modul praktikum struktur data.
 
