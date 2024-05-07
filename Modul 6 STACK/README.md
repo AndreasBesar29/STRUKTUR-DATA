@@ -4,6 +4,26 @@
 <p align="center">2311102198 / IF-11-E</p>
 
 ## Dasar Teori
+Stack (tumpukan) merupakan suatu susunan koleksi data dimana data yang dapat ditambahkan dan dihapus selalu dilakukan pada bagian akhir data, yang disebut dengan top of stack. Dengan kata lain, stack hanya mengijinkan akses pada item yang terakhir dimasukkan[1].
+
+Stack atau tumpukan adalah suatu stuktur data yang penting dalam pemrograman dengan metode pemrosesan yang bersifat LIFO (Last In First Out) dimana objek/benda yang terakhir masuk ke dalam stack akan menjadi benda pertama yang dikeluarkan dari stack. Dengan model demikian, maka hanya bagian paling atas saja dari stack (TOP) yang bisa di akses. Salah satu kelebihan stack adalah bahwa struktur data tersebut dapat di implementasikan baik pada array maupun pada linked list.
+
+Adapun operasi-operasi/fungsi yang dapat dilakukan pada stack adalah sebagai berikut : 
+1) Push : digunakan untuk menambah item pada stack pada tumpukan paling atas. 
+2) Pop : digunakan untuk mengambil item pada stack pada tumpukan paling atas.
+3) Clear : digunakan untuk mengkosongkan stack. 
+4) IsEmpty : fungsi yang digunakan untuk mengecek apakah stack sudah kosong.
+5) IsFull : fungsi yang digunakan untuk mengecek apakah stack sudah penuh[2].
+
+Ciri-Ciri Stack : 
+1. Elemen TOP (puncak) diketahui. Dalam stack, elemen teratas (puncak) selalu teridentifikasi, memudahkan akses langsung ke elemen yang paling baru ditambahkan atau yang paling atas.
+2. Pengisipan dan penghapusan elemen selalu dilakukan di TOP. Operasi pengisian (penambahan) dan penghapusan elemen selalu terjadi di puncak stack, memastikan bahwa elemen yang terakhir dimasukkan akan menjadi elemen yang pertama kali dihapus.
+3. LIFO ( Last In, First Out ). Konsep LIFO (Last In, First Out) yang mendasari stack menunjukkan bahwa elemen yang paling baru ditambahkan akan menjadi elemen yang pertama kali diakses atau dihapus.
+
+Pemanfaatan Stack : 
+1. Perhitungan ekspresi aritmatika (posfix). Untuk mengonversi ekspresi dari bentuk infix ke postfix dan mengevaluasinya dengan urutan yang benar.
+2. Algoritma backtraking (runut balik). Untuk menyimpan langkah-langkah sementara dan mencoba solusi alternatif.
+3. Algoritma rekursif. Untuk menyimpan konteks panggilan fungsi dan memastikan kedalaman rekursi yang terbatas[3].
 
 ## Guided
 ### 1. [Guided I]
@@ -268,3 +288,10 @@ Kode diatas digunakan untuk membalikkan huruf di dalam kalimat dari huruf kapita
 ## Kesimpulan
 
 ## Referensi
+[1] Holle, Khadijah Fahmi Hayati. (2022). Modul praktikum struktur data.
+
+
+[2] Sihombing, Johnson. (2019). Penerapan Stack Dan Queue Pada Array Dan Linked List Dalam Java. INFOKOM (Informatika & Komputer), 7(2), 15-24.
+
+
+[3] Astuti, Indah Kusuma, (2019). STRUKTUR DATA LINKED LIST.
