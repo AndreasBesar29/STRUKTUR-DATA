@@ -164,28 +164,254 @@ int main()
 }
 ```
 #### Output:
+![Output Guided 1](https://github.com/AndreasBesar29/STRUKTUR-DATA-ASSIGNMENT/assets/161665251/6376b805-73bb-44ed-87c1-b6ff6b14c799)
 
-Kode diatas digunakan untuk
+Kode diatas digunakan untuk menerapkan fungsi fungsi dalam struktur data queue atau antrian. Dimulai dari fungsi menambahkan, menghapus dan lain lain. Kode diatas menghasilkan output data yang dimasukkan di dalam program tersebut dan muncul di output secara urut dan benar.
 
 ## Unguided
 ### 1. [Ubahlah penerapan konsep queue pada bagian guided dari array menjadi linked list]
 ```C++
+// Andreas Besar Wibowo
+// IF-11-E / 2311102198
+
+#include <iostream>
+
+using namespace std;
+
+const int maksAntrian = 5;
+
+struct Node {
+    string data;
+    Node* next;
+};
+
+class Queue {
+private:
+    Node* head;
+    Node* tail;
+    int size;
+public:
+    Queue() {
+        head = nullptr;
+        tail = nullptr;
+        size = 0;
+    }
+
+    bool isEmpty() {
+        return head == nullptr;
+    }
+
+    void enqueueAntrian(string dataAntrian) {
+        Node* newNode = new Node;
+        newNode->data = dataAntrian;
+        newNode->next = nullptr;
+
+        if (isEmpty()) {
+            head = newNode;
+            tail = newNode;
+        } else {
+            tail->next = newNode;
+            tail = newNode;
+        }
+        size++;
+    }
+
+    void dequeueAntrian() {
+        if (isEmpty()) {
+            cout << "Antrian kosong" << endl;
+            return;
+        }
+        Node* temp = head;
+        head = head->next;
+        delete temp;
+        size--;
+    }
+
+    void tampilkanAntrian() {
+        if (isEmpty()) {
+            cout << "Data antrian teller:" << endl;
+            for (int a = 1; a <= maksAntrian; a++) {
+                cout << a << ". (kosong)" << endl;
+            }
+            cout << "Jumlah antrian = 0" << endl;
+            return;
+        }
+
+        Node* current = head;
+        int position = 1;
+        cout << "Data antrian teller:" << endl;
+        while (current != nullptr && position <= maksAntrian) {
+            cout << position << ". " << current->data << endl;
+            current = current->next;
+            position++;
+        }
+        while (position <= maksAntrian) {
+            cout << position << ". (kosong)" << endl;
+            position++;
+        }
+        cout << "Jumlah antrian = " << hitungAntrian() << endl;
+    }
+
+    int hitungAntrian() {
+        return size;
+    }
+
+    void bersihkanAntrian() {
+        while (!isEmpty()) {
+            dequeueAntrian();
+        }
+    }
+};
+
+int main() {
+    Queue antrian;
+
+    antrian.enqueueAntrian("Andi");
+    antrian.enqueueAntrian("Maya");
+    antrian.tampilkanAntrian();
+    cout << endl;
+    antrian.dequeueAntrian();
+    antrian.tampilkanAntrian();
+    cout << endl;
+    antrian.bersihkanAntrian();
+    antrian.tampilkanAntrian();
+
+    return 0;
+}
 
 ```
 #### Output:
+![Output Unguided 1](https://github.com/AndreasBesar29/STRUKTUR-DATA-ASSIGNMENT/assets/161665251/74873611-67d4-49e7-a230-d7d91948bd0f)
 
-Kode diatas digunakan untuk
+Kode diatas digunakan untuk mengimplementasikan fungsi fungsi dari queue dengan menggunakan single linked list. Output yang dihasilkan sama seperti guided1, yang berbeda adalah guided menggunakan array dan program ini menggunakan linked list.
 
-### 1. [Dari nomor 1 buatlah konsep antri dengan atribut Nama mahasiswa dan NIM Mahasiswa]
+### 2. [Dari nomor 1 buatlah konsep antri dengan atribut Nama mahasiswa dan NIM Mahasiswa]
 ```C++
+// Andreas Besar Wibowo
+// IF-11-E / 2311102198
+
+#include <iostream>
+
+using namespace std;
+
+const int maksAntrian = 5;
+
+struct dataMahasiswa {
+    string nama_Mhs;
+    string nim_Mhs;
+};
+
+struct Node {
+    dataMahasiswa data;
+    Node* next;
+};
+
+class Queue {
+private:
+    Node* head;
+    Node* tail;
+    int size;
+public:
+    Queue() {
+        head = nullptr;
+        tail = nullptr;
+        size = 0;
+    }
+
+    bool isEmpty() {
+        return head == nullptr;
+    }
+
+    void enqueueAntrian(string nama_Mhs, string nim_Mhs) {
+        Node* newNode = new Node;
+        newNode->data.nama_Mhs = nama_Mhs;
+        newNode->data.nim_Mhs = nim_Mhs;
+        newNode->next = nullptr;
+
+        if (isEmpty()) {
+            head = newNode;
+            tail = newNode;
+        } else {
+            tail->next = newNode;
+            tail = newNode;
+        }
+        size++;
+    }
+
+    void dequeueAntrian() {
+        if (isEmpty()) {
+            cout << "Antrian kosong" << endl;
+            return;
+        }
+        Node* temp = head;
+        head = head->next;
+        delete temp;
+        size--;
+    }
+
+    void tampilkanAntrian() {
+        if (isEmpty()) {
+            cout << "Data antrian daftar mahasiswa:" << endl;
+            for (int a = 1; a <= maksAntrian; a++) {
+                cout << a << ". (kosong)" << endl;
+            }
+            cout << "Jumlah antrian = 0" << endl;
+            return;
+        }
+
+        Node* current = head;
+        int position = 1;
+        cout << "Data antrian daftar mahasiswa:" << endl;
+        while (current != nullptr && position <= maksAntrian) {
+            cout << position << ". Nama : " << current->data.nama_Mhs << " ( " << current->data.nim_Mhs << " ) "<<endl;
+            current = current->next;
+            position++;
+        }
+        while (position <= maksAntrian) {
+            cout << position << ". (kosong)" << endl;
+            position++;
+        }
+        cout << "Jumlah antrian = " << hitungAntrian() << endl;
+    }
+
+    int hitungAntrian() {
+        return size;
+    }
+
+    void bersihkanAntrian() {
+        while (!isEmpty()) {
+            dequeueAntrian();
+        }
+    }
+};
+
+int main() {
+    Queue antrian;
+
+    antrian.enqueueAntrian("Andreas", "2311102198");
+    antrian.enqueueAntrian("Alexandra", "2204150209");
+    antrian.enqueueAntrian("Octa Wijaya", "1810010207");
+    antrian.tampilkanAntrian();
+    cout << endl;
+    antrian.dequeueAntrian();
+    antrian.tampilkanAntrian();
+    cout << endl;
+    antrian.bersihkanAntrian();
+    antrian.tampilkanAntrian();
+
+    return 0;
+}
 
 ```
 #### Output:
+![Output Unguided 2](https://github.com/AndreasBesar29/STRUKTUR-DATA-ASSIGNMENT/assets/161665251/5490c92a-b909-4c41-b419-3ae209a07fa8)
 
-Kode diatas digunakan untuk
+Kode diatas digunakan untuk mengimplementasikan fungsi dari queue dengan menggunakan single linked list juga sama seperti unguided1, namun bedanya adalah program ini digunakan untuk mendata mahasiswa dari nama mahasiswa dan NIM mahasiswa.
 
 ## Kesimpulan
+Kesimpulan dari materi ini adalah antrian (queue) adalah konsep penting yang menjelaskan struktur data FIFO. Operasi dasar seperti Enqueue atau menambah item, Dequeue atau menghapus item ini bisa memanipulasi data. Dan pentingnya mengerti kondisi antrian penuh (overflow) dan kosong (underflow) serta operasi operasi lain seperti memeriksa status antrian dan lain lain. Dari antrian atau queue ini kita bisa mendapatkan pengalaman atau cara untuk mengatur memori oenting dan mengoptimalkan algoritma dan struktur data.
 
+Dalam pembelajaran materi ini, saya memperoleh pemahaman dasar dari antrian dalam komputer. Ini berisi tentang penambahan dan penghapusan item serta operasi operasi tambahan lainnya. Saya juga mendapatkan pemahaman tentang keefisien dan kekompleksitasan waktu dalam operasi antrian. Materi ini menberikan dasar yang kuar dalam merancang solusi software dengan efisien.
 ## Referensi
 [1]Zein, A., & Eriana, E. S. (2022). ALGORITMA DAN STRUKTUR DATA.
 
