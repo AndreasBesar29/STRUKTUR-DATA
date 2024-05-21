@@ -56,9 +56,9 @@ int main() {
     bool ketemu = binarySearch(kalimat, i, pencarian);
 
     if (ketemu) {
-        cout << "Huruf " << pencarian << "terdapat pada kalimat." << endl;
+        cout << "Huruf " << pencarian << " terdapat pada kalimat." << endl;
     } else {
-        cout << "Huruf " << pencarian << "tidak terdapat pada kalimat." << endl;
+        cout << "Huruf " << pencarian << " tidak terdapat pada kalimat." << endl;
     }
 
     return 0;
