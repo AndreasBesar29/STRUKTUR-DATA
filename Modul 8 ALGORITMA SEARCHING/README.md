@@ -60,7 +60,7 @@ int main () {
 #### Output:
 ![Output Guided 1](https://github.com/AndreasBesar29/STRUKTUR-DATA-ASSIGNMENT/assets/161665251/1f9eb4db-8d60-473c-8794-699ee6dc55c0)
 
-Kode diatas digunakan untuk
+Program diatas digunakan untuk mencari nilai tertentu yang ada di dalam array data. Kode diatas menggunakan algoritma sequential search dimana data tidak terurut. Jika nilai yang dicari ada di dalam data maka dia akan menandai nilai tersebut dan jika nilai yang dicari tidak ada di dalam data maka program akan mencetak bahwa nilai tidak ditemukan.
 
 ### 2. [Guided II : Buatlah sebuah project untuk melakukan pencarian data dengan menggunakan Binary Search.]
 ```C++
@@ -155,7 +155,7 @@ int main()
 #### Output:
 ![Output Guided 2](https://github.com/AndreasBesar29/STRUKTUR-DATA-ASSIGNMENT/assets/161665251/b4846239-3cce-4154-b0a8-9836a55ea517)
 
-Kode diatas digunakan untuk
+Program diatas digunakan untuk mencari nilai yang ada di dalam data array. Tetapi harus terlebih dahulu mengurutkan data menggunakan algoritma selection sort dan bisa dijalankan karena ini menggunakan binary search. Program akan mengurutkan dan menampilkan nilai yang dicari di dalam data berada diindex keberapa.
 
 ## Unguided
 ### 1. [Buatlah sebuah program untuk mencari sebuah huruf pada sebuah kalimat yang sudah di input dengan menggunakan Binary Search!]
@@ -229,7 +229,7 @@ int main() {
 #### Output:
 ![Output Unguided 1](https://github.com/AndreasBesar29/STRUKTUR-DATA-ASSIGNMENT/assets/161665251/332d852f-ea3c-4ec5-ab31-e52ecf9aebb3)
 
-Kode diatas digunakan untuk
+Program diatas digunakan untuk mencari huruf yang user inginkan. Pada awal program user diminta untuk memasukkan kalimat dan setelah itu user diminta untuk memasukkan huruf apa yang ingin user tau dalam kalimat. Maka outputnya akan menampilkan bahwa huruf yang dimaksud oleh user terdapat atau tidak di dalam kalimat. Program ini menggunakan algoritma Binary Search.
 
 ### 2. [Buatlah sebuah program yang dapat menghitung banyaknya huruf vocal dalam sebuah kalimat!]
 ```C++
@@ -268,7 +268,7 @@ int main() {
 #### Output:
 ![Output Unguided 2](https://github.com/AndreasBesar29/STRUKTUR-DATA-ASSIGNMENT/assets/161665251/b9d923e4-7f22-42f8-9572-b7dd879f39ce)
 
-Kode diatas digunakan untuk
+Program diatas digunakan untuk menentukan banyaknya huruf vocal yang digunakan di dalam kalimat yang di masukkan user. Huruf vokalnya terdiri dari a, i, u, e, o. Program ini menggunakan algoritma sequential search.
 
 ### 3. [Diketahui data = 9, 4, 1, 4, 7, 10, 5, 4, 12, 4. Hitunglah berapa banyak angka 4 dengan menggunakan algoritma Sequential Search!]
 ```C++
@@ -299,10 +299,12 @@ int main() {
 #### Output:
 ![Output Unguided 3](https://github.com/AndreasBesar29/STRUKTUR-DATA-ASSIGNMENT/assets/161665251/b848fcf3-2fbc-4734-a21e-873d9b6c826c)
 
-Kode diatas digunakan untuk
+Program diatas digunakan untuk menghitung jumlahnya frekuensi angka di dalam data array. Pada output menampilkan angka yang ingin dicari dan jumlah banyaknya angka yang ada di dalam data array. Program ini menggunakan algoritma sequential search.
 
 ## Kesimpulan
+Kesimpulan dari materi ini adalah pentingnya memilih metode/cara pencarian tergantung dari kebutuhan dan karakteristik datanya. Binary search merupakan algoritma pencarian yang cocok dan sangat efisien untuk data yang terurut. Jika data tidak terurut, data harus diurutkan terlebih dahulu. Sequential search adalah algoritma pencarian yang digunakan untuk data yang tidak terurut. Kekurangan dari algoritma Sequential search yaitu data harus diperiksa secara berurutan.
 
+Dari pembelajaran materi ini, saya memperoleh pemahaman tentang pemilihan metode pencarian yang cocok atau bisa sesuai kondisi yang dibutuhkan dari binary search dan sequential search. Binary search dapat menghemat waktu jika datanya terurut. Sequential search dapat lebih sederhana karena data tidak perlu urut. Dan saya bisa belajar untuk merancang sebuah sistem agar lebih optimal dengan membandingkan dari kedua metode tersebut yang sesuai dengan kebutuhan saya.
 ## Referensi
 [1] Wijaya, H. (2021). Algoritma Sequential Searching untuk Pencarian Identitas Mahasiswa dalam Penilaian Monitoring dan Evaluasi Kuliah Kerja Nyata Tematik. Akademika Jurnal, 18(1), 6-10.
 
