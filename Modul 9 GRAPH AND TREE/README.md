@@ -130,6 +130,7 @@ int main()
 }
 ```
 #### Output:
+![Output Guided 1](https://github.com/AndreasBesar29/STRUKTUR-DATA-ASSIGNMENT/assets/161665251/707038d9-63d0-4c2b-9970-640777bf81bb)
 
 Program diatas digunakan untuk menampilkan representasi dari graph yang berbobot dan terdiri dari tujuh simpul yang menandakan kota, dan beberapa angka yang menandakan busur atau rute. Dari setiap busur ini mempunyai suatu bobot yang menunjukan jarak antar kotanya
 
@@ -538,6 +539,8 @@ int main() {
 }
 ```
 #### Output:
+![Output Guided 2 (1)](https://github.com/AndreasBesar29/STRUKTUR-DATA-ASSIGNMENT/assets/161665251/ddd9a87f-d6f8-4984-a55f-7c6439c9cbf4)
+![Output Guided 2 (2)](https://github.com/AndreasBesar29/STRUKTUR-DATA-ASSIGNMENT/assets/161665251/bcee5bf6-d768-49dc-929f-976037b5eae5)
 
 Program diatas digunakan untuk membuat operasi pembuatan, penambhan, penghapusan, dan penelusuran simpul di dalam tree. Dalam program ini juga bisa menampilkan karakteristik dari pohonnya.
 
@@ -607,6 +610,7 @@ int main() {
 
 ```
 #### Output:
+![Output Unguided 1](https://github.com/AndreasBesar29/STRUKTUR-DATA-ASSIGNMENT/assets/161665251/7eb451db-dbdb-412f-9ecb-ca9b5ca8504e)
 
 Program diatas digunakan untuk membantu user dalam menginputkan informasi mulai dari nama kota dan jarak antar kotanya. Dalam program ini, informasi itu dibentuk dalam tabel agar mudah dipahami.
 
@@ -1273,10 +1277,28 @@ int main()
 
 ```
 #### Output:
+![Output Unguided 2 (1)](https://github.com/AndreasBesar29/STRUKTUR-DATA-ASSIGNMENT/assets/161665251/bbf06c29-9bd2-4907-8785-51da8b8b2d43)
+![Output Unguided 2 (2)](https://github.com/AndreasBesar29/STRUKTUR-DATA-ASSIGNMENT/assets/161665251/a68f6162-01b8-4b2b-8aeb-a4af14839274)
+![Output Unguided 2 (3)](https://github.com/AndreasBesar29/STRUKTUR-DATA-ASSIGNMENT/assets/161665251/1cc10d31-d985-4201-b891-845de7d45eb1)
+![Output Unguided 2 (4)](https://github.com/AndreasBesar29/STRUKTUR-DATA-ASSIGNMENT/assets/161665251/f3d5a1a4-820c-44de-b330-53787888e2c1)
+![Output Unguided 2 (5)](https://github.com/AndreasBesar29/STRUKTUR-DATA-ASSIGNMENT/assets/161665251/8d101db3-c00e-4d5e-bf9d-b55206ca0b08)
+![Output Unguided 2 (6)](https://github.com/AndreasBesar29/STRUKTUR-DATA-ASSIGNMENT/assets/161665251/3573d6ad-2728-4afe-86d5-4805f134c457)
+![Output Unguided 2 (7)](https://github.com/AndreasBesar29/STRUKTUR-DATA-ASSIGNMENT/assets/161665251/f0114a96-8b75-4fb7-9a69-13f133bf14e6)
+![Output Unguided 2 (8)](https://github.com/AndreasBesar29/STRUKTUR-DATA-ASSIGNMENT/assets/161665251/70d26700-7f14-4f13-ad1f-36bb3c0714b3)
+![Output Unguided 2 (9)](https://github.com/AndreasBesar29/STRUKTUR-DATA-ASSIGNMENT/assets/161665251/7530ff77-d828-4280-92c8-371e7160f45c)
+![Output Unguided 2 (10)](https://github.com/AndreasBesar29/STRUKTUR-DATA-ASSIGNMENT/assets/161665251/8772541e-f26b-4ca0-af95-82dd5240df68)
+![Output Unguided 2 (11)](https://github.com/AndreasBesar29/STRUKTUR-DATA-ASSIGNMENT/assets/161665251/bc9ace6e-e0b8-44d5-acd2-5e1d1dfa7373)
+![Output Unguided 2 (12)](https://github.com/AndreasBesar29/STRUKTUR-DATA-ASSIGNMENT/assets/161665251/13af9402-39ed-4c7b-97e1-ee69693cfe15)
+![Output Unguided 2 (13)](https://github.com/AndreasBesar29/STRUKTUR-DATA-ASSIGNMENT/assets/161665251/237ad9a8-9586-4d75-bda6-ca06841f5da4)
+![Output Unguided 2 (14)](https://github.com/AndreasBesar29/STRUKTUR-DATA-ASSIGNMENT/assets/161665251/078cb4b3-1dda-45b8-ba5c-66249871ce4c)
+![Output Unguided 2 (15)](https://github.com/AndreasBesar29/STRUKTUR-DATA-ASSIGNMENT/assets/161665251/ec53c0be-7444-49cb-b1c3-6b08cff8eb9f)
 
 Program diatas digunakan untuk meminta user untuk memilih dari beberapa menu yang tersedia dalam program, seperti : membuat, menambahkan, memperbarui, mencari, dan menu menu lainnya. Program ini menggunakan Struktur data tree yang mempunyai pointer ke simpul kanan, kiri, dan induk atau parent.
 
 ## Kesimpulan
+Kesimpulan dari materi ini adalah graf merupakan kumpulan simpul yang dihubungkan oleh sisi dan digunakan untuk menunjukan hubungan antar objek. Graf disini beragam jenis seperti graf tak berarah, berarah, dan berbobot. Tree merupakan struktur data yang memiliki node sebagai elemen dasar dan root sebagai node utama. Tree disini berfungsi untuk menyimpan dan mengatur data dengan efisien. Di dalam tree juga ada operasi dasar, seperti find, insert, tranverse, dan lain lain.
+
+Dari materi ini, saya memperoleh pembelajaran bahwa graph and tree adalah struktur data yang cukup penting dalam ilmu komputer dan bisa untuk memecahkan solusi. Graph membantu dalam menganalisis hubungan antar objek, dan tree membantu mengatur data secara erisien. Disini juga bisa memahami konsep dari vertex, edge, path, dan lain lain pada graph, dan root, subtree, leaf, dan lain lain pada tree. Operasi operasi lainnya juga penting dalam mengembangkan sistem secara kompleks.
 
 ## Referensi
 [1] Safei, M. R. (2019). PENGERTIAN STRUKTUR DATA NON LINIER.
